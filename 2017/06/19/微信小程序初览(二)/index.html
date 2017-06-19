@@ -330,7 +330,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#WXML是啥"><span class="post-toc-number">1.</span> <span class="post-toc-text">WXML是啥</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#数据绑定"><span class="post-toc-number">2.</span> <span class="post-toc-text">数据绑定</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#条件渲染"><span class="post-toc-number">3.</span> <span class="post-toc-text">条件渲染</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#模板"><span class="post-toc-number">4.</span> <span class="post-toc-text">模板</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#引用"><span class="post-toc-number">5.</span> <span class="post-toc-text">引用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#事件"><span class="post-toc-number">6.</span> <span class="post-toc-text">事件</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是wxss？"><span class="post-toc-number"></span> <span class="post-toc-text">什么是wxss？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#App"><span class="post-toc-number"></span> <span class="post-toc-text">App</span></a>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#WXML是啥"><span class="post-toc-number">1.</span> <span class="post-toc-text">WXML是啥</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#数据绑定"><span class="post-toc-number">2.</span> <span class="post-toc-text">数据绑定</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#条件渲染"><span class="post-toc-number">3.</span> <span class="post-toc-text">条件渲染</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#模板"><span class="post-toc-number">4.</span> <span class="post-toc-text">模板</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#引用"><span class="post-toc-number">5.</span> <span class="post-toc-text">引用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#事件"><span class="post-toc-number">6.</span> <span class="post-toc-text">事件</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是wxss？"><span class="post-toc-number"></span> <span class="post-toc-text">什么是wxss？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#App"><span class="post-toc-number"></span> <span class="post-toc-text">App</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Page"><span class="post-toc-number"></span> <span class="post-toc-text">Page</span></a>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -514,6 +514,70 @@
 <h3 id="App"><a href="#App" class="headerlink" title="App"></a>App</h3><p>我们可以通过App()来注册一个小程序，并指定它的生命周期</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">App(&#123;</div><div class="line">    <span class="comment">// 监听小程序初始化，只会在小程序注册时调用，其中返回值中包括了`path`小程序路径、`query`打开小程序的query、`scene`场景值</span></div><div class="line">    onLaunch: <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;&#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 监听小程序显示，当小程序启动或者从前台进入后台时会调用该方法</span></div><div class="line">    onShow: <span class="function"><span class="keyword">function</span>(<span class="params">options</span>) </span>&#123;&#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 监听小程序隐藏，当小程序从前台进入后台时调用</span></div><div class="line">    onHide: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 监听小程序的错误，当小程序发生错误时触发，类似`window.onerror`</span></div><div class="line">    onError: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;,</div><div class="line"></div><div class="line">    <span class="comment">// 全局对象</span></div><div class="line">    globalData: &#123;&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// app本身是一个单例在一个程序中只有一个，所以在其它文件中如果想要使用APP对象需要通过下列方法调用</span></div><div class="line"><span class="keyword">var</span> appInstance = getApp();</div></pre></td></tr></table></figure>
 <p><img src="http://www.wxapp-union.com/data/attachment/portal/201705/09/225319eqm11ldwf211lfam.png" alt=""></p>
+<blockquote>
+<p>当用户点击左上角关闭，或者按了设备 Home 键离开微信，小程序并没有直接销毁，而是进入了后台；当再次进入微信或再次打开小程序，又会从后台进入前台。</p>
+</blockquote>
+<p>在这里我们还需要注意的一点就是<strong>场景值</strong>，场景值应该是微信所独有的一个概念，即你通过什么的方式进入小程序，你可以是通过“发现栏小程序主入口”，也可以是通过“单人聊天窗口”等等途径进入不同的方式都对应这个一个固定的值，这样你就可以根据不同的场景值对用户作区分、统计，亦或是功能上的区分，这些完全可以根据你的应用场景来决定。具体场景值可以参考文档<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/scene.html" target="_blank" rel="external">“场景值”</a></p>
+<h3 id="Page"><a href="#Page" class="headerlink" title="Page"></a>Page</h3><p>和注册小程序相似，注册页面可以通过Page()去指定页面的生命周期、事件函数以及初始化数据</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">Page(&#123;</div><div class="line">    <span class="comment">// 初始化的页面数据</span></div><div class="line">    data: &#123;</div><div class="line">        <span class="attr">text</span>: <span class="string">"初始化数据"</span></div><div class="line">    &#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 页面加载时触发，这里的加载指的是第一次加载</span></div><div class="line">    onLoad: <span class="function"><span class="keyword">function</span>(<span class="params">options</span>) </span>&#123;&#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 页面渲染完成时触发</span></div><div class="line">    onReady: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 页面显示时触发，每次打开都会触发</span></div><div class="line">    onShow: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 页面隐藏时触发</span></div><div class="line">    onHide: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 页面卸载时触发</span></div><div class="line">    onUnload: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 用户下拉时触发</span></div><div class="line">    onPullDownRefresh: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 用户上拉触底时触发</span></div><div class="line">    onReachBottom: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 点击分享后触发</span></div><div class="line">    onShareAppMessage: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 事件绑定函数</span></div><div class="line">    viewTap: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// 修改页面数据</span></div><div class="line">        <span class="keyword">this</span>.setData(&#123;</div><div class="line">            <span class="attr">text</span>: <span class="string">'啦啦啦啦啦'</span></div><div class="line">        &#125;)</div><div class="line">    &#125;,</div><div class="line">    </div><div class="line">    <span class="comment">// 自定义的对象</span></div><div class="line">    customData: &#123;</div><div class="line">        <span class="attr">hi</span>: <span class="string">'MINA'</span></div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><img src="http://www.wxapp-union.com/data/attachment/portal/201705/09/225319y4rjwaojhydejdy6.png" alt=""></p>
+<p>上图为页面生命周期的一个描述，其中<code>onLoad</code>和<code>onUnload</code>对应代表了页面的生命开始和结束，页面的生命周期中<code>onLoad</code>、<code>onUnload</code>、<code>onReady</code>只会调用一次，<code>onShow</code>、<code>onHide</code>是可以多次调用的</p>
+<table>
+<thead>
+<tr>
+<th>路由方式</th>
+<th>触发时机</th>
+<th>页面栈表现</th>
+<th>路由前页面</th>
+<th>路由后页面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初始化</td>
+<td>在小程序中打开第一个页面</td>
+<td>新页面入栈</td>
+<td>-</td>
+<td>onLoad,onShow</td>
+</tr>
+<tr>
+<td>打开新页面</td>
+<td>调用<code>wx.navigateTo</code>或者使用<code>navigator</code>组件跳转方式为<code>navigateTo</code></td>
+<td>新页面入栈</td>
+<td>onHide</td>
+<td>onLoad,onShow</td>
+</tr>
+<tr>
+<td>页面重定向</td>
+<td>调用<code>wx.redirectTo</code>或者使用<code>navigator</code>组件跳转方式为<code>redirectTo</code></td>
+<td>当前页面出栈，新页面入栈</td>
+<td>onUnload</td>
+<td>onLoad,onShow</td>
+</tr>
+<tr>
+<td>页面返回</td>
+<td>调用<code>wx.navigateBack</code>或者使用<code>navigator</code>组件跳转类型为<code>navigateBack</code>或者按返回键</td>
+<td>页面不断出栈，直到找到目标页面</td>
+<td>onUnload</td>
+<td>onShow</td>
+</tr>
+<tr>
+<td>Tab切换</td>
+<td>调用<code>wx.switchTab</code>或者使用<code>navigator</code>组件跳转类型为<code>switchTab</code></td>
+<td>页面全部出栈，只留下访问的tab页</td>
+<td>-</td>
+<td>根据跳转页面的不同而不同</td>
+</tr>
+<tr>
+<td>重加载</td>
+<td>调用<code>wx.reLaunch</code>或者使用<code>navigator</code>组件跳转类型为<code>reLaunch</code></td>
+<td>页面全部出栈，只留下新的页面</td>
+<td>onUnload</td>
+<td>onLoad,onShow</td>
+</tr>
+</tbody>
+</table>
+<p>当然，如果你觉得上面的表述比较麻烦，你也可以直接在微信开发者工具中看到当前页面栈的变化情况</p>
 
     
 
