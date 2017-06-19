@@ -330,7 +330,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小程序"><span class="post-toc-number">1.</span> <span class="post-toc-text">小程序</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小程序"><span class="post-toc-number">1.</span> <span class="post-toc-text">小程序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#最简单的小程序"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">最简单的小程序</span></a></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -484,7 +484,22 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2>
+        <h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><h3 id="最简单的小程序"><a href="#最简单的小程序" class="headerlink" title="最简单的小程序"></a>最简单的小程序</h3><p><img src="http://www.wxapp-union.com/data/attachment/portal/201705/09/225318ztxt8cyr5ctmw6xk.png" alt="结构图"></p>
+<p>整个工程包括app.js 、app.json、app.wxss，以及pages和utils目录。</p>
+<p>其中，app.js、app.json、app.wxss最为重要，它们对整个小程序进行全局配置。</p>
+<ul>
+<li>app.js，声明小程序的整个生命周期、定义全局变量</li>
+<li>app.json，对整个小程序起全局配置的作用，规定小程序包括哪些页面、窗口的样式、<strong>底部tab栏的样式</strong>、网络超时事件、是否开启debug模式</li>
+<li>app.wxss，这里的wxss类似于css，只不过是针对微信做了一部分的拓展，定义了小程序的全局样式</li>
+</ul>
+<p>page目录下面每一个子目录都代表了小程序中的一个页面，每个页面都由<em>.js  </em>.json  <em>.wxmk  </em>.wxss组成。</p>
+<ul>
+<li>*.js ,处理页面的逻辑</li>
+<li>*.json ,处理页面的配置</li>
+<li>*.wxml ,处理页面的结构</li>
+<li>*.wxss ,处理页面的样式</li>
+</ul>
+
     
 
     
